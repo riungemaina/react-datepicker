@@ -1,11 +1,11 @@
-import React, { BaseSyntheticEvent, useEffect, useRef, useState } from "react";
-import DatepickerDropdown from "./datepicker-dropdown/datepickerDropdown";
-import { DatepickerProvider } from "../../provider";
-import { useOutsideClick } from "../../hooks/useOutSideClick";
 import moment from "moment";
-import "./style.scss";
-import { EnumLang, EnumTheme } from "./enum";
+import React, { useEffect, useRef, useState } from "react";
+import { useOutsideClick } from "../../hooks/useOutSideClick";
+import { DatepickerProvider } from "../../provider";
+import DatepickerDropdown from "./datepicker-dropdown/datepickerDropdown";
 import { EDropdownPositions } from "./datepicker-dropdown/useDropdownRoles";
+import { EnumLang, EnumTheme } from "./enum";
+import "./style.scss";
 var moment_jalali = require("jalali-moment");
 
 export interface IPropsDatepicker {

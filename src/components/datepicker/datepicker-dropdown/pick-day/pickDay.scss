@@ -31,7 +31,7 @@
         display: flex;
         margin: 5px 10px;
         flex-wrap: wrap;
-        flex-direction: row-reverse;
+        flex-direction: row;
         justify-content: space-around;
 
         .__datepicker-days {
@@ -69,7 +69,6 @@
             &.__datepicker-today {
                 color: var(--primary);
                 border: 1px solid var(--primary);
-                ;
             }
 
             &.__datepicker-selected {

@@ -1,1 +1,1 @@
-export {default as pickDay} from "./pickDay";
+export { default as pickDay } from "./pickDay";

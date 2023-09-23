@@ -1,13 +1,11 @@
-import "./datepickerDropdown.scss";
-import React, { useRef, useState } from "react";
-import useDropdownRoles, { EDropdownPositions } from "./useDropdownRoles";
-import { Body } from "./body";
-import PickDay from "./pick-day/pickDay";
-import PickMonth from "./pick-month";
-import moment from "moment";
+import React, { useState } from "react";
 import useDateTools from "../../../hooks/useDateTools";
 import Loading from "../../loading/loading";
+import "./datepickerDropdown.scss";
+import PickDay from "./pick-day/pickDay";
+import PickMonth from "./pick-month";
 import PickYear from "./pick-year/pickYear";
+import useDropdownRoles, { EDropdownPositions } from "./useDropdownRoles";
 
 interface IProps {
     open: boolean;

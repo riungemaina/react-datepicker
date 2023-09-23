@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import useDateTools from "../../../../hooks/useDateTools";
 import usePersian from "../../../../hooks/usePersian";
 import { DatepickerContext } from "../../../../provider";
@@ -23,6 +23,8 @@ const PickDay = ({ onStep }: IProps) => {
             }
         };
 
+    console.log(new Array(getMonth()?.countDay).fill("DefaultValue"), date.format("YYYY-MM-"));
+
     return (
         <Body
             onNext={handleNextPrev(false)}
@@ -33,11 +35,13 @@ const PickDay = ({ onStep }: IProps) => {
             onPrev={handleNextPrev(true)}>
             <div className={`__datepicker-pick-day-container`}>
                 <div className="__datepicker-weak">
-                    {getWeakDayName().map((item, index) => (
-                        <div className={`__datepicker-weak-item`} key={index}>
-                            {item}
-                        </div>
-                    ))}
+                    {getWeakDayName()
+                        .reverse()
+                        .map((item, index) => (
+                            <div className={`__datepicker-weak-item`} key={index}>
+                                {item}
+                            </div>
+                        ))}
                 </div>
                 <div className={`__datepicker-pick-day`}>
                     <FillEndAndStart

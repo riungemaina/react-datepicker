@@ -1,5 +1,4 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import useDateTools from "../../../../hooks/useDateTools";
 import usePersian from "../../../../hooks/usePersian";
 import { DatepickerContext } from "../../../../provider";
@@ -10,6 +9,7 @@ interface IProps {
     onClick?: () => void;
     disabled?: boolean;
 }
+
 const Day = ({ day, date, disabled, onClick }: IProps) => {
     const config = useContext(DatepickerContext);
     const { moment } = useDateTools();

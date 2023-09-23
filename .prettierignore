@@ -5,6 +5,7 @@ coverage
 dist
 .storybook
 node_modules
+docs
 
 *.rst
 *.txt

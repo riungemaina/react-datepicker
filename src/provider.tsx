@@ -1,8 +1,8 @@
 import moment from 'moment'
 import React, { createContext, useEffect, useState } from 'react'
 import { IEvent, IEventLogic, IOnDateFunc } from './components/calendar'
-import { EnumLang, EnumTheme } from './components/datepicker/enum'
 import { priorityStoreInit } from './components/calendar/content/monthly/cell/priorityStore'
+import { EnumLang, EnumTheme } from './components/datepicker/enum'
 var moment_jalali = require('jalali-moment')
 export interface IConfigDatePicker {
   lang: 'fa' | 'en'
@@ -102,9 +102,8 @@ const DatepickerProvider = ({
         } catch {
           input.current.value = 'Invalid Date'
         }
-      } else {
-        console.log('input is null ', input)
-      }
+      } else console.log('input is null ', input)
+
       if (closeWhenSelectADay && setOpen) setOpen(false)
     }
     if (value) setDate(value)
@@ -118,21 +117,19 @@ const DatepickerProvider = ({
     priorityStoreInit.clear()
 
     setEvents(
-      config.events?.map(item => {
-        return {
-          ...item,
-          date:
-            typeof item.date === 'string'
-              ? {
-                  start: moment(item.date).format('YYYY-MM-DD'),
-                  end: moment(item.date).format('YYYY-MM-DD'),
-                }
-              : {
-                  start: moment(item.date?.start).format('YYYY-MM-DD'),
-                  end: moment(item.date?.end).format('YYYY-MM-DD'),
-                },
-        }
-      })
+      config.events?.map(item => ({
+        ...item,
+        date:
+          typeof item.date === 'string'
+            ? {
+                start: moment(item.date).format('YYYY-MM-DD'),
+                end: moment(item.date).format('YYYY-MM-DD'),
+              }
+            : {
+                start: moment(item.date?.start).format('YYYY-MM-DD'),
+                end: moment(item.date?.end).format('YYYY-MM-DD'),
+              },
+      }))
     )
   }, [config.events])
 
@@ -163,4 +160,4 @@ const DatepickerProvider = ({
   )
 }
 
-export { DatepickerProvider, DatepickerContext }
+export { DatepickerContext, DatepickerProvider }

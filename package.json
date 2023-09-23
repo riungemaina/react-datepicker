@@ -1,6 +1,6 @@
 {
   "name": "@riunge/react-datepicker",
-  "version": "2.1.16",
+  "version": "2.1.17",
   "description": "cool date picker and calendar for English and Persian",
   "scripts": {
     "rollup": "rollup -c",
@@ -12,7 +12,7 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/riungemaina/react-datepicker"
+    "url": "git+https://github.com/riungemaina/react-datepicker.git"
   },
   "keywords": [
     "datepicker",

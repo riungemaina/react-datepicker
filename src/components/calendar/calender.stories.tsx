@@ -1,8 +1,8 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import 'antd/dist/antd.css'
-import Calender from '.'
 import moment from 'moment'
+import React from 'react'
+import Calender from '.'
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Calender',

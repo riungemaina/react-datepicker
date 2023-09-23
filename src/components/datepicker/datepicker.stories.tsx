@@ -1,9 +1,9 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Datepicker from './datepicker'
-import 'antd/dist/antd.css'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Input } from 'antd'
+import 'antd/dist/antd.css'
 import moment from 'moment'
+import React from 'react'
+import Datepicker from './datepicker'
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Datepicker',

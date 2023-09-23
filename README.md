@@ -18,7 +18,6 @@ A cool datepicker and calendar for english and persian you can see some features
  
 ![alt text](./calendar-fa-en.png?raw=true)
 
-
 &#127775; If you like this Datepicker, please bookmark it on your github with the star button.
 
 ## Installation
@@ -100,7 +99,7 @@ The Calendar props interface provides configuration options for customizing the 
 | `disabledDate`       | `(date: moment.Moment) => boolean`          | A function that determines whether a date should be disabled. It takes a Moment.js date object as input and should return `true` to disable the date or `false` to enable it. |
 | `onClickEvent`       | `(item: IEvent) => void`                    | A function to handle event click events. It receives an `IEvent` object as its argument.                                                                                      |
 | `onDoubleClickEvent` | `(item: IEvent) => void`                    | A function to handle event double-click events. It receives an `IEvent` object as its argument.                                                                               |
-| `onDropEvent`        | `(item: IEvent) => void`                    | A function to handle event drop events. It receives an `IEvent` object as its argument, to enable drag and drop functionality, this prop should not be `undefined`                                                                                       |
+| `onDropEvent`        | `(item: IEvent) => void`                    | A function to handle event drop events. It receives an `IEvent` object as its argument, to enable drag and drop functionality, this prop should not be `undefined`            |
 | `onDateClick`        | `(date: string) => void`                    | A function to handle date click events. It receives a date string as its argument.                                                                                            |
 | `onMonthChange`      | `(start: string, end: string) => void`      | A function to handle month change events. It receives two date strings, `start` and `end`, indicating the new visible date range on the calendar.                             |
 | `style`              | `React.CSSProperties`                       | Additional CSS styles to apply to the calendar component.                                                                                                                     |

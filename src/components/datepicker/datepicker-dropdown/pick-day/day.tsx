@@ -51,7 +51,8 @@ const Day = ({ day, date, disabled, onClick }: IProps) => {
                     config.setValue(moment(day));
                 }
             }}
-            title={findEffect()?.title}>
+            title={findEffect()?.title}
+        >
             {convertNumbers(moment(day).format("D"))}
             {findEffect() && (
                 <span

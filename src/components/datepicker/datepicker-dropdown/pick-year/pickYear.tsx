@@ -29,7 +29,8 @@ const PickYear = ({ onStep }: IProps) => {
         <Body
             onNext={handlePrevAndNext(false)}
             onPrev={handlePrevAndNext(true)}
-            headerText={`${convertNumbers(date.year() - 9)} - ${convertNumbers(date.year() + 10)}`}>
+            headerText={`${convertNumbers(date.year() - 9)} - ${convertNumbers(date.year() + 10)}`}
+        >
             <div className="__datepicker-pick-year">
                 {between.map((i, index) => (
                     <div
@@ -40,7 +41,8 @@ const PickYear = ({ onStep }: IProps) => {
                                 config.setDate(date.add(i, "year"));
                                 onStep(1);
                             }
-                        }}>
+                        }}
+                    >
                         {convertNumbers(date.year() + i)}
                     </div>
                 ))}

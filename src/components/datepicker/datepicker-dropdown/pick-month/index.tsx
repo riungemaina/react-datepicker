@@ -28,7 +28,8 @@ const PickMonth = ({ onStep }: IProps) => {
             onClick={() => onStep(2)}
             onPrev={headerButton(true, 1)}
             onNextDouble={headerButton(false, 5)}
-            onPrevDouble={headerButton(true, 5)}>
+            onPrevDouble={headerButton(true, 5)}
+        >
             <div className={`__datepicker-pick-month`}>
                 {getMonths().map((month: string, index: number) => (
                     <div
@@ -41,7 +42,8 @@ const PickMonth = ({ onStep }: IProps) => {
                         onClick={() => {
                             if (config.setDate) config.setDate(date?.set({ month: index }));
                             onStep(0);
-                        }}>
+                        }}
+                    >
                         {month}
                     </div>
                 ))}

@@ -98,10 +98,12 @@ const Datepicker = ({
             value={value}
             defaultValue={defaultValue}
             closeWhenSelectADay={closeWhenSelectADay}
-            input={refInput}>
+            input={refInput}
+        >
             <div
                 className={`__datepicker __datepicker-theme-${theme} __datepicker-theme-mode-${modeTheme} `}
-                ref={ref}>
+                ref={ref}
+            >
                 <div className={"__datepicker-input"}>
                     {cloneInputRef === undefined && <div style={{ display: "none" }}>{input}</div>}
                     <input

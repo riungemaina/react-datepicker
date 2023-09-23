@@ -72,7 +72,8 @@ const Calender = ({
                 onDateClick,
                 onDay,
                 onMonthChange,
-            }}>
+            }}
+        >
             <div className={`__calendar __calendar-theme-${theme}`} style={style}>
                 <MonthCalendar />
             </div>

@@ -121,7 +121,8 @@ const Cell = ({ date, disabled, onClick, cellIndexInWeek }: IProps) => {
             onDragOver={e => {
                 e.preventDefault();
             }}
-            onDrop={handleDrop}>
+            onDrop={handleDrop}
+        >
             <div className="__calendar-table-td-body">
                 <div className={`__calendar-table-td-body-date`}>
                     {moment_(date).format("DD MMMM")}

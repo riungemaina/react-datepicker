@@ -20,7 +20,7 @@ const MonthCalendar = () => {
                 const newDate = date.add(mines ? -1 : 1, year ? "year" : "month");
                 config.setDate(newDate);
 
-                const clone = newDate.clone()
+                const clone = newDate.clone();
                 config.onMonthChange &&
                     config.onMonthChange(
                         clone.startOf("month").locale("en").format("YYYY-MM-DD"),
@@ -43,7 +43,8 @@ const MonthCalendar = () => {
                         {convertNumbers(getYear())} {getMonth()?.fullName}
                     </div>
                 </div>
-            }>
+            }
+        >
             <Table>
                 <thead>
                     <tr>

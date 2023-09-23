@@ -58,7 +58,9 @@
                 transform: translate3d(-50%, 0, 0);
             }
 
-            &:hover:not(.__datepicker-day-disabled):not(.__datepicker-today):not(.__datepicker-selected) {
+            &:hover:not(.__datepicker-day-disabled):not(.__datepicker-today):not(
+                    .__datepicker-selected
+                ) {
                 background-color: var(--secondary);
             }
 

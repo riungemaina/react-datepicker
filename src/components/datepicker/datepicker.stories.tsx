@@ -56,7 +56,8 @@ English.args = {
                 <div
                     onClick={() => {
                         if (setValue) setValue(moment());
-                    }}>
+                    }}
+                >
                     Today
                 </div>
             </>
@@ -78,7 +79,8 @@ Persian.args = {
                 <div
                     onClick={() => {
                         if (setValue) setValue(moment());
-                    }}>
+                    }}
+                >
                     امروز
                 </div>
             </>
@@ -107,7 +109,8 @@ AllParams.args = {
                 <div
                     onClick={() => {
                         if (setValue) setValue(moment());
-                    }}>
+                    }}
+                >
                     Today
                 </div>
             </>

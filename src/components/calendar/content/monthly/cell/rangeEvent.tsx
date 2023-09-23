@@ -97,7 +97,8 @@ const RangeEvent: React.FC<IProps> = ({
             onClick={config.onClickEvent?.bind(this, item)}
             onMouseEnter={handleMouseHover(false)}
             onMouseLeave={handleMouseHover(true)}
-            onDoubleClick={config.onDoubleClickEvent?.bind(this, item)}>
+            onDoubleClick={config.onDoubleClickEvent?.bind(this, item)}
+        >
             {!item.icon ? (
                 <div
                     className={`__calendar-table-td-body-events-item-circle`}

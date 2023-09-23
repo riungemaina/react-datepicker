@@ -158,7 +158,8 @@ const DatepickerProvider = ({
                     priorityStoreInit.clear();
                     setEvents(events);
                 },
-            }}>
+            }}
+        >
             {children}
         </DatepickerContext.Provider>
     );

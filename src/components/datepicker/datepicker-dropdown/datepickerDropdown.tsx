@@ -41,7 +41,8 @@ const DatepickerDropdown = ({
                             ? "__datepicker-modal"
                             : adjustPosition
                         : position
-                } ${fix ? fix : ""}`}>
+                } ${fix ? fix : ""}`}
+            >
                 <Loading loading={loading} spinnerComponent={spinnerComponent}>
                     <>
                         {step === 0 && <PickDay onStep={setStep} />}

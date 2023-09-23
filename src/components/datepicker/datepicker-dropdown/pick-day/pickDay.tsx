@@ -32,7 +32,8 @@ const PickDay = ({ onStep }: IProps) => {
             onPrevDouble={handleNextPrev(true, true)}
             onClick={() => onStep(1)}
             headerText={`${getMonth()?.name} ${convertNumbers(getYear())}`}
-            onPrev={handleNextPrev(true)}>
+            onPrev={handleNextPrev(true)}
+        >
             <div className={`__datepicker-pick-day-container`}>
                 <div className="__datepicker-weak">
                     {getWeakDayName()

@@ -27,7 +27,7 @@
   "bugs": {
     "url": "https://github.com/riungemaina/react-datepicker/wiki/Bugs"
   },
-  "homepage": "https://ijavad805.github.io/react-datepicker/",
+  "homepage": "http://react-datepicker.castynet.africa/",
   "devDependencies": {
     "@babel/core": "^7.18.10",
     "@rollup/plugin-commonjs": "^22.0.2",

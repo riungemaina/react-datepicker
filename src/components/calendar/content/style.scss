@@ -1,56 +1,56 @@
 .__calendar-body {
-    width: var(--width);
-    height: 100%;
+  width: var(--width);
+  height: 100%;
 
-    .__calendar-header {
+  .__calendar-header {
+    display: flex;
+    justify-content: space-between;
+
+    .__calender-header-children {
+      width: 130px;
+    }
+
+    .__calender-header-controllers {
+      display: flex;
+      align-items: center;
+      direction: ltr;
+      gap: 20px;
+
+      .__calendar-controller {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        color: rgb(59, 59, 59);
+        user-select: none;
+        border: var(--border);
+        width: 25px;
+        border-radius: 3px;
+        cursor: pointer;
+        height: 25px;
 
-        .__calender-header-children {
-            width: 130px;
+        &:nth-last-child(1) {
+          transform: rotate(180deg);
         }
 
-        .__calender-header-controllers {
-            display: flex;
-            align-items: center;
-            direction: ltr;
-            gap: 20px;
-
-            .__calendar-controller {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                color: rgb(59, 59, 59);
-                user-select: none;
-                border: var(--border);
-                width: 25px;
-                border-radius: 3px;
-                cursor: pointer;
-                height: 25px;
-
-                &:nth-last-child(1) {
-                    transform: rotate(180deg);
-                }
-
-                &:hover {
-                    border-color: var(--primary);
-                    color: #fff;
-                }
-            }
-
-            .__calendar-header-today {
-                cursor: pointer;
-            }
+        &:hover {
+          border-color: var(--primary);
+          color: #fff;
         }
-    }
+      }
 
-    .__calender-content {
-        height: 100%;
+      .__calendar-header-today {
+        cursor: pointer;
+      }
     }
+  }
 
-    table {
-        th {
-            text-align: center;
-        }
+  .__calender-content {
+    height: 100%;
+  }
+
+  table {
+    th {
+      text-align: center;
     }
+  }
 }

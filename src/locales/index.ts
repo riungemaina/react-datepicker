@@ -1,7 +1,7 @@
-import faLocale from "./fa";
+import faLocale from './fa'
 
 const locales = {
-    fa: faLocale,
-};
+  fa: faLocale,
+}
 
-export default locales;
+export default locales

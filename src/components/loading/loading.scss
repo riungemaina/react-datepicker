@@ -1,40 +1,40 @@
 .__datepicker-loading-container {
-    position: relative;
+  position: relative;
 
-    .__datepicker-loading {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba($color: #000000, $alpha: 0.3);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: var(--corner);
+  .__datepicker-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--corner);
 
-        .__datepicker-loading-spin {
-            width: 48px;
-            height: 48px;
-            display: inline-block;
-            background: #fff;
-            position: relative;
-            box-sizing: border-box;
-            animation: flipX 1s linear infinite;
-        }
+    .__datepicker-loading-spin {
+      width: 48px;
+      height: 48px;
+      display: inline-block;
+      background: #fff;
+      position: relative;
+      box-sizing: border-box;
+      animation: flipX 1s linear infinite;
     }
+  }
 }
 
 @keyframes flipX {
-    0% {
-        transform: perspective(200px) rotateX(0deg) rotateY(0deg);
-    }
+  0% {
+    transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+  }
 
-    50% {
-        transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
-    }
+  50% {
+    transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
+  }
 
-    100% {
-        transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
-    }
+  100% {
+    transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
+  }
 }

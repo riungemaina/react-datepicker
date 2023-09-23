@@ -1,23 +1,23 @@
 .__datepicker-pick-year {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    .__datepicker-year {
-        padding: 5px 0px;
-        border: 1px solid transparent;
-        cursor: pointer;
-        margin-bottom: 10px;
-        width: 45px;
-        text-align: center;
+  .__datepicker-year {
+    padding: 5px 0px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 45px;
+    text-align: center;
 
-        &:hover {
-            border: 1px solid var(--primary);
-            border-radius: var(--corner);
-        }
-
-        &.__datepicker-controller {
-            opacity: 0.4;
-        }
+    &:hover {
+      border: 1px solid var(--primary);
+      border-radius: var(--corner);
     }
+
+    &.__datepicker-controller {
+      opacity: 0.4;
+    }
+  }
 }

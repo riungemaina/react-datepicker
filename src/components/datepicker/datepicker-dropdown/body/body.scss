@@ -1,61 +1,61 @@
 .__datepicker-dropdown-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .__datepicker-dropdown-body-header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
     align-items: center;
+    border-bottom: var(--light-border);
+    padding-bottom: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    direction: ltr !important;
 
-    .__datepicker-dropdown-body-header {
-        display: flex;
-        justify-content: space-between;
-        user-select: none;
-        align-items: center;
-        border-bottom: var(--light-border);
-        padding-bottom: 5px;
-        width: 100%;
-        margin-bottom: 10px;
-        direction: ltr !important;
+    .__datepicker-dropdown-header-text {
+      cursor: pointer;
 
-        .__datepicker-dropdown-header-text {
-            cursor: pointer;
+      &.__datepicker-unclickabled {
+        cursor: auto;
+      }
 
-            &.__datepicker-unclickabled {
-                cursor: auto;
-            }
-
-            &:not(.__datepicker-unclickabled):hover {
-                color: var(--primary);
-            }
-        }
-
-        .__datepicker-dropdown-body-controller {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: var(--corner);
-            user-select: none;
-            background-size: 100%;
-            margin: 5px 0;
-            cursor: pointer;
-
-            &:nth-child(1) {
-                transform: rotate(0deg);
-            }
-
-            &:nth-child(3) {
-                transform: rotate(-180deg);
-            }
-
-            .__datepicker-icon {
-                display: flex;
-                margin: 0 3px;
-                width: 25px;
-                justify-content: center;
-                background-color: var(--primary);
-                border-radius: var(--corner);
-
-                svg {
-                    width: 7px;
-                }
-            }
-        }
+      &:not(.__datepicker-unclickabled):hover {
+        color: var(--primary);
+      }
     }
+
+    .__datepicker-dropdown-body-controller {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: var(--corner);
+      user-select: none;
+      background-size: 100%;
+      margin: 5px 0;
+      cursor: pointer;
+
+      &:nth-child(1) {
+        transform: rotate(0deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-180deg);
+      }
+
+      .__datepicker-icon {
+        display: flex;
+        margin: 0 3px;
+        width: 25px;
+        justify-content: center;
+        background-color: var(--primary);
+        border-radius: var(--corner);
+
+        svg {
+          width: 7px;
+        }
+      }
+    }
+  }
 }

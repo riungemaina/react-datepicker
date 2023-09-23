@@ -1,5 +1,5 @@
 const faLocale = {
-    Today: "امروز",
-};
+  Today: 'امروز',
+}
 
-export default faLocale;
+export default faLocale

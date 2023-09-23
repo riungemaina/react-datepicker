@@ -1,20 +1,20 @@
 interface IEvent {
-    id: number;
-    priority: number;
+  id: number
+  priority: number
 }
 
 export class priorityStore {
-    static store: IEvent[] = [];
+  static store: IEvent[] = []
 
-    add(event: IEvent) {
-        if (priorityStore.store.find(i => i.id === event.id) === undefined) {
-            priorityStore.store.push(event);
-        }
+  add(event: IEvent) {
+    if (priorityStore.store.find(i => i.id === event.id) === undefined) {
+      priorityStore.store.push(event)
     }
+  }
 
-    clear() {
-        priorityStore.store = [];
-    }
+  clear() {
+    priorityStore.store = []
+  }
 }
 
-export const priorityStoreInit = new priorityStore();
+export const priorityStoreInit = new priorityStore()

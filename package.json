@@ -1,6 +1,6 @@
 {
   "name": "@riunge/react-datepicker",
-  "version": "2.1.19",
+  "version": "2.1.20",
   "description": "cool date picker and calendar for react",
   "scripts": {
     "rollup": "rollup -c",

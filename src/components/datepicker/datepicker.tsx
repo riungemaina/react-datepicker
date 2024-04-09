@@ -1,4 +1,4 @@
-import moment from 'moment'
+import moment, { Moment } from 'moment'
 import React, { useEffect, useRef, useState } from 'react'
 import { useOutsideClick } from '../../hooks/useOutSideClick'
 import { DatepickerProvider } from '../../provider'
@@ -6,7 +6,6 @@ import DatepickerDropdown from './datepicker-dropdown/datepickerDropdown'
 import { EDropdownPositions } from './datepicker-dropdown/useDropdownRoles'
 import { EnumLang, EnumTheme } from './enum'
 import './style.scss'
-var moment_jalali = require('jalali-moment')
 
 export interface IPropsDatepicker {
   theme?: keyof typeof EnumTheme
@@ -56,7 +55,7 @@ const Datepicker = ({
 }: IPropsDatepicker) => {
   const moment_ = moment
   const [open, setOpen] = useState<boolean>(false)
-  const [value, setValue] = useState()
+  const [value, setValue] = useState<Moment>()
   const ref = useRef<any>(null)
   const [cloneInputRef, setCloneRef] = useState<any>()
   const refInput = useRef<any>(null)

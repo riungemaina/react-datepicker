@@ -1,14 +1,12 @@
-import useDateTools from '../../../../hooks/useDateTools'
-import Body from '../body'
 import React, { useContext } from 'react'
-import Table from '../../../table'
-import Cell from './cell/cell'
-import usePersian from '../../../../hooks/usePersian'
+import useDateTools from '../../../../hooks/useDateTools'
 import { DatepickerContext } from '../../../../provider'
+import Table from '../../../table'
+import Body from '../body'
+import Cell from './cell/cell'
 
 const MonthCalendar = () => {
   const { getWeakDayName, getMonth, getMonthStartWith, moment, date, getYear } = useDateTools()
-  const { convertNumbers } = usePersian()
   const config = useContext(DatepickerContext)
 
   const countTr = Math.ceil((getMonth().countDay + getMonthStartWith()) / 7)
@@ -40,7 +38,7 @@ const MonthCalendar = () => {
       header={
         <div className="__calender-month-header">
           <div className="__calender-header-title">
-            {convertNumbers(getYear())} {getMonth()?.fullName}
+            {getYear()} {getMonth()?.fullName}
           </div>
         </div>
       }

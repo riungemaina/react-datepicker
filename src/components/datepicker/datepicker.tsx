@@ -36,7 +36,7 @@ export interface IPropsDatepicker {
 
 const Datepicker = ({
   theme = EnumTheme.blue,
-  lang = EnumLang.fa,
+  lang = EnumLang.en,
   input = <input placeholder="datepicker" />,
   format = 'YYYY/MM/DD',
   footer,
@@ -54,7 +54,7 @@ const Datepicker = ({
   adjustPosition = 'auto',
   name,
 }: IPropsDatepicker) => {
-  const moment_ = lang === 'fa' ? moment_jalali : moment
+  const moment_ = moment
   const [open, setOpen] = useState<boolean>(false)
   const [value, setValue] = useState()
   const ref = useRef<any>(null)
@@ -67,9 +67,6 @@ const Datepicker = ({
 
   useEffect(() => {
     let v = moment_(value_)
-    if (lang === 'fa') {
-      v = moment_.from(value_, 'en')
-    }
     if (value_ && value_ !== value) setValue(v.locale(lang))
   }, [value_])
 

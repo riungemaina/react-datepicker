@@ -1,5 +1,5 @@
 import moment from 'moment'
-import React, { StyleHTMLAttributes } from 'react'
+import React from 'react'
 import { DatepickerProvider } from '../../provider'
 import MonthCalendar from './content/monthly'
 import './style.scss'
@@ -34,7 +34,7 @@ export type IOnDateFunc = (date: string) => {
   className?: string
 }
 export interface IProps {
-  lang?: 'en' | 'fa'
+  lang?: 'en'
   theme?: 'blue'
   events: IEvent[]
   onDay?: IOnDateFunc

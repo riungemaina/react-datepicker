@@ -1,7 +1,7 @@
 {
   "name": "@riunge/react-datepicker",
-  "version": "2.1.18",
-  "description": "cool date picker and calendar for English and Persian",
+  "version": "2.1.19",
+  "description": "cool date picker and calendar for react",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",
@@ -22,7 +22,7 @@
     "react-component",
     "next"
   ],
-  "author": "Max Riunge & Javad kazemzadeh",
+  "author": "Max Riunge",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/riungemaina/react-datepicker/wiki/Bugs"
@@ -76,7 +76,6 @@
     "react-dom": ">=16.9.0"
   },
   "dependencies": {
-    "jalali-moment": "^3.3.11",
     "moment": "^2.29.4"
   }
 }

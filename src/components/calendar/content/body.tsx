@@ -1,5 +1,4 @@
 import React from 'react'
-import useTranslate from '../../../hooks/useTranslate'
 import { CaretIcon } from '../../datepicker/datepicker-dropdown/body/body'
 import './style.scss'
 
@@ -13,8 +12,6 @@ interface IProps {
 }
 
 const Body = ({ children, onNextClick, onPrevClick, header, side, onTodayClick }: IProps) => {
-  const { _t } = useTranslate()
-
   return (
     <div className={`__calendar-body`}>
       <div className={`__calendar-header`}>
@@ -24,7 +21,7 @@ const Body = ({ children, onNextClick, onPrevClick, header, side, onTodayClick }
             <CaretIcon color="rgba(59, 59, 59,0.8)" height="15px" width={'15px'} />
           </div>
           <div className={`__calendar-header-today`} onClick={onTodayClick}>
-            {_t('Today')}
+            {'Today'}
           </div>
           <div className={`__calendar-controller`} onClick={onNextClick}>
             <CaretIcon color="rgba(59, 59, 59,0.8)" height="15px" width={'15px'} />

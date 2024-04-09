@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Input } from 'antd'
 import 'antd/dist/antd.css'
-import moment from 'moment'
 import React from 'react'
 import Datepicker from './datepicker'
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -59,29 +58,6 @@ English.args = {
           }}
         >
           Today
-        </div>
-      </>
-    )
-  },
-}
-
-export const Persian = Template.bind({})
-
-Persian.args = {
-  theme: 'blue',
-  lang: 'fa',
-  modeTheme: 'dark',
-  value: moment(),
-  input: <Input />,
-  footer: (moment, setValue) => {
-    return (
-      <>
-        <div
-          onClick={() => {
-            if (setValue) setValue(moment())
-          }}
-        >
-          امروز
         </div>
       </>
     )

@@ -70,7 +70,7 @@ function App() {
       onOpen={() => {
         console.log('datepicker is open');
       }}
-      lang={'en'} // en and fa
+      lang={'en'} // en
       loading={false} // show loading in datepicker if is open
       modeTheme={'dark'} // dark and light
       theme={'blue'} // blue , orange , red , green , yellow

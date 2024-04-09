@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import useDateTools from '../../../../hooks/useDateTools'
-import usePersian from '../../../../hooks/usePersian'
 import { DatepickerContext } from '../../../../provider'
 import { Body } from '../body'
 import Day from './day'
@@ -13,7 +12,6 @@ interface IProps {
 const PickDay = ({ onStep }: IProps) => {
   const config = useContext(DatepickerContext)
   const { getMonth, getYear, date, getWeakDayName } = useDateTools()
-  const { convertNumbers } = usePersian()
 
   const handleNextPrev =
     (mines: boolean, year: boolean = false) =>
@@ -31,7 +29,7 @@ const PickDay = ({ onStep }: IProps) => {
       onNextDouble={handleNextPrev(false, true)}
       onPrevDouble={handleNextPrev(true, true)}
       onClick={() => onStep(1)}
-      headerText={`${getMonth()?.name} ${convertNumbers(getYear())}`}
+      headerText={`${getMonth()?.name} ${getYear()}`}
       onPrev={handleNextPrev(true)}
     >
       <div className={`__datepicker-pick-day-container`}>

@@ -21,23 +21,11 @@ const useDateTools = () => {
     return moment_jalali
   }
   const getMonths = () => {
-    if (config.lang === 'fa') {
-      try {
-        return momentDatePicker()().locale('fa').localeData().jMonths()
-      } catch (e) {
-        console.log('react-datepicker Error:', e)
-        return ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'ابان', 'اذر', 'دی', 'بهمن', 'اسفند']
-      }
-    }
-
     return momentDatePicker()().localeData().monthsShort()
   }
 
   const getWeakDayName = (minName: boolean = true) => {
     let dayNames = [...(minName ? date.localeData().weekdaysMin() : date.localeData().weekdays())]
-    if (config.lang === 'fa') {
-      dayNames.unshift(dayNames.pop() as any)
-    }
 
     return dayNames
   }

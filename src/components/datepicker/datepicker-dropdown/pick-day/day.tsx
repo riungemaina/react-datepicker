@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import useDateTools from '../../../../hooks/useDateTools'
-import usePersian from '../../../../hooks/usePersian'
 import { DatepickerContext } from '../../../../provider'
 
 interface IProps {
@@ -13,7 +12,6 @@ interface IProps {
 const Day = ({ day, date, disabled, onClick }: IProps) => {
   const config = useContext(DatepickerContext)
   const { moment } = useDateTools()
-  const { convertNumbers } = usePersian()
 
   const findEffect = () => {
     return config.dayEffects?.find(item => moment(item.day).format('YYYY-MM-D') === moment(day).format('YYYY-MM-D'))
@@ -51,7 +49,7 @@ const Day = ({ day, date, disabled, onClick }: IProps) => {
       }}
       title={findEffect()?.title}
     >
-      {convertNumbers(moment(day).format('D'))}
+      {moment(day).format('D')}
       {findEffect() && <span className="__datepicker-day-effect" style={{ background: findEffect()?.dotColor }} />}
     </div>
   )

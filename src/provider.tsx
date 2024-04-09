@@ -3,9 +3,8 @@ import React, { createContext, useEffect, useState } from 'react'
 import { IEvent, IEventLogic, IOnDateFunc } from './components/calendar'
 import { priorityStoreInit } from './components/calendar/content/monthly/cell/priorityStore'
 import { EnumLang, EnumTheme } from './components/datepicker/enum'
-var moment_jalali = require('jalali-moment')
 export interface IConfigDatePicker {
-  lang: 'fa' | 'en'
+  lang: 'en'
   theme: keyof typeof EnumTheme
   pick?: 'day' | 'month' | 'year'
   setPick?: (val: 'day' | 'month' | 'year') => void
@@ -85,7 +84,7 @@ const DatepickerProvider = ({
   setOpen,
   closeWhenSelectADay,
 }: IProps) => {
-  const moment_ = config.lang === 'fa' ? moment_jalali : moment
+  const moment_ = moment
   moment_.locale(config.lang)
 
   const [pick, setPick] = useState<'day' | 'month' | 'year'>('day')

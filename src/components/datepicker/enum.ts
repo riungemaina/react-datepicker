@@ -7,7 +7,6 @@ export enum EnumTheme {
 }
 
 export enum EnumLang {
-  fa = 'fa',
   en = 'en',
 }
 

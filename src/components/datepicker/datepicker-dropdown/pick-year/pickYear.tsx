@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import useDateTools from '../../../../hooks/useDateTools'
-import usePersian from '../../../../hooks/usePersian'
 import { DatepickerContext } from '../../../../provider'
 import { Body } from '../body'
 import './pickYear.scss'
@@ -12,7 +11,6 @@ interface IProps {
 const PickYear = ({ onStep }: IProps) => {
   const { date } = useDateTools()
   const config = useContext(DatepickerContext)
-  const { convertNumbers } = usePersian()
 
   const between = [-9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -29,7 +27,7 @@ const PickYear = ({ onStep }: IProps) => {
     <Body
       onNext={handlePrevAndNext(false)}
       onPrev={handlePrevAndNext(true)}
-      headerText={`${convertNumbers(date.year() - 9)} - ${convertNumbers(date.year() + 10)}`}
+      headerText={`${date.year() - 9} - ${date.year() + 10}`}
     >
       <div className="__datepicker-pick-year">
         {between.map((i, index) => (
@@ -43,7 +41,7 @@ const PickYear = ({ onStep }: IProps) => {
               }
             }}
           >
-            {convertNumbers(date.year() + i)}
+            {date.year() + i}
           </div>
         ))}
       </div>

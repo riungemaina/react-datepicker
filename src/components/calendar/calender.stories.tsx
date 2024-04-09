@@ -12,7 +12,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Calender> = args => (
-  <div style={{ direction: args.lang === 'fa' ? 'rtl' : 'ltr', height: '120vh' }}>
+  <div style={{ height: '120vh' }}>
     <Calender {...args} style={{ height: 600 }} />
   </div>
 )
@@ -21,7 +21,7 @@ const fakeEvents = [
   {
     date: { start: '2023-09-12', end: '2023-09-12' },
     id: 6478,
-    title: 'تعطیل',
+    title: 'Sample Event Title',
     icon: null,
     style: {
       backgroundColor: '#8B0000',
@@ -30,25 +30,25 @@ const fakeEvents = [
   {
     date: { start: '2023-09-12', end: '2023-09-15' },
     id: 641,
-    title: 'مرحله اول',
+    title: 'Another Event Title',
     icon: null,
   },
   {
     date: { start: '2023-09-14', end: '2023-09-15' },
     id: 642,
-    title: 'مرحله دوم',
+    title: 'Yet Another Event Title',
     icon: null,
   },
   {
     date: { start: '2023-09-17', end: '2023-09-20' },
     id: 643,
-    title: 'مرحله سوم',
+    title: 'Even More Event Title',
     icon: null,
   },
   {
     date: { start: '2023-09-23', end: '2023-09-26' },
     id: 644,
-    title: 'مرحله چهارم',
+    title: 'All The Events Title',
     icon: null,
   },
 ]
@@ -90,22 +90,5 @@ English.args = {
   events: updatedEvents,
   onDropEvent: item => {
     console.log(item)
-  },
-}
-
-export const Persian = Template.bind({})
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Persian.args = {
-  lang: 'fa',
-  events: updatedEvents,
-  onDropEvent: item => {
-    console.log(item)
-  },
-  onDay: date => {
-    if (moment(date).day() === 5) {
-      return {
-        className: 'holiday',
-      }
-    }
   },
 }

@@ -88,7 +88,5 @@ export const English = Template.bind({})
 English.args = {
   lang: 'en',
   events: updatedEvents,
-  onDropEvent: item => {
-    console.log(item)
-  },
+  onDropEvent: item => {},
 }

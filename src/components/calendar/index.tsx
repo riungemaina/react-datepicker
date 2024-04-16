@@ -49,7 +49,6 @@ export interface IProps {
 }
 
 const Calender = ({
-  lang = 'en',
   theme = 'blue',
   events,
   onDropEvent,
@@ -63,7 +62,6 @@ const Calender = ({
   return (
     <DatepickerProvider
       config={{
-        lang,
         theme,
         events,
         onDropEvent,

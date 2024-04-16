@@ -4,12 +4,11 @@ import { useOutsideClick } from '../../hooks/useOutSideClick'
 import { DatepickerProvider } from '../../provider'
 import DatepickerDropdown from './datepicker-dropdown/datepickerDropdown'
 import { EDropdownPositions } from './datepicker-dropdown/useDropdownRoles'
-import { EnumLang, EnumTheme } from './enum'
+import { EnumTheme } from './enum'
 import './style.scss'
 
 export interface IPropsDatepicker {
   theme?: keyof typeof EnumTheme
-  lang?: keyof typeof EnumLang
   adjustPosition?: typeof EDropdownPositions | 'modal' | 'auto'
   input?: JSX.Element
   format?: string
@@ -35,7 +34,6 @@ export interface IPropsDatepicker {
 
 const Datepicker = ({
   theme = EnumTheme.blue,
-  lang = EnumLang.en,
   input = <input placeholder="datepicker" />,
   format = 'YYYY/MM/DD',
   footer,
@@ -66,7 +64,7 @@ const Datepicker = ({
 
   useEffect(() => {
     let v = moment_(value_)
-    if (value_ && value_ !== value) setValue(v.locale(lang))
+    if (value_ && value_ !== value) setValue(v.locale('en'))
   }, [value_])
 
   useEffect(() => {
@@ -80,7 +78,6 @@ const Datepicker = ({
   return (
     <DatepickerProvider
       config={{
-        lang: lang,
         theme: theme,
         disabledDate,
         dayEffects,
@@ -105,15 +102,9 @@ const Datepicker = ({
             disabled={disabled}
             onChange={(e: any) => {
               let date
-              if (typeof e === 'string') {
-                date = moment_(e)
-              } else if (e.target !== undefined) {
-                date = moment_(e.target.value)
-              }
-
-              if (date && date.isValid()) {
-                if (lang === 'en' || date.year() >= 1000) setValue(date)
-              }
+              if (typeof e === 'string') date = moment_(e)
+              else if (e.target !== undefined) date = moment_(e.target.value)
+              if (date && date.isValid()) setValue(date)
             }}
             name={name ? name : cloneInputRef?.getAttribute('name')}
           />

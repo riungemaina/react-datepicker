@@ -63,12 +63,12 @@ interface IProps {
 export const CaretIcon = ({ color = '#FFF', width = '25px', height = '25px' }: IProps) => {
   return (
     <svg width={width} height={height} viewBox="-5 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g
           id="ui-gambling-website-lined-icnos-casinoshunter"
           transform="translate(-1913.000000, -158.000000)"
           fill={color}
-          fill-rule="nonzero"
+          fillRule="nonzero"
         >
           <g id="1" transform="translate(1350.000000, 120.000000)">
             <path

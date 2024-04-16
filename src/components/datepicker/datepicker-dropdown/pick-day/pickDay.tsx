@@ -21,8 +21,6 @@ const PickDay = ({ onStep }: IProps) => {
       }
     }
 
-  console.log(new Array(getMonth()?.countDay).fill('DefaultValue'), date.format('YYYY-MM-'))
-
   return (
     <Body
       onNext={handleNextPrev(false)}
@@ -45,7 +43,7 @@ const PickDay = ({ onStep }: IProps) => {
         <div className={`__datepicker-pick-day`}>
           <FillEndAndStart start={true} onNext={handleNextPrev(true)} onPrev={handleNextPrev(true)} />
           {new Array(getMonth()?.countDay).fill('DefaultValue').map((i, index) => (
-            <Day day={date.format('YYYY-MM-') + (index + 1)} date={date} />
+            <Day day={date.format('YYYY-MM-') + (index + 1)} date={date} key={index} />
           ))}
           <FillEndAndStart start={false} onNext={handleNextPrev(false)} onPrev={handleNextPrev(false)} />
         </div>

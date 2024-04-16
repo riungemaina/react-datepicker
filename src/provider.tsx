@@ -2,9 +2,8 @@ import moment from 'moment'
 import React, { createContext, useEffect, useState } from 'react'
 import { IEvent, IEventLogic, IOnDateFunc } from './components/calendar'
 import { priorityStoreInit } from './components/calendar/content/monthly/cell/priorityStore'
-import { EnumLang, EnumTheme } from './components/datepicker/enum'
+import { EnumTheme } from './components/datepicker/enum'
 export interface IConfigDatePicker {
-  lang: 'en'
   theme: keyof typeof EnumTheme
   pick?: 'day' | 'month' | 'year'
   setPick?: (val: 'day' | 'month' | 'year') => void
@@ -32,7 +31,6 @@ export interface IConfigDatePicker {
 }
 
 const DatepickerContext = createContext<IConfigDatePicker>({
-  lang: 'en',
   theme: EnumTheme.blue,
   pick: 'day',
   date: moment(),
@@ -43,7 +41,6 @@ interface IProps {
   children: React.ReactNode
   config: {
     // share
-    lang: keyof typeof EnumLang
     theme: keyof typeof EnumTheme
     disabledDate?: (date: moment.Moment) => Boolean
 
@@ -85,7 +82,7 @@ const DatepickerProvider = ({
   closeWhenSelectADay,
 }: IProps) => {
   const moment_ = moment
-  moment_.locale(config.lang)
+  moment_.locale('en')
 
   const [pick, setPick] = useState<'day' | 'month' | 'year'>('day')
   const [date, setDate] = useState(moment_())
@@ -101,7 +98,7 @@ const DatepickerProvider = ({
         } catch {
           input.current.value = 'Invalid Date'
         }
-      } else console.log('input is null ', input)
+      }
 
       if (closeWhenSelectADay && setOpen) setOpen(false)
     }

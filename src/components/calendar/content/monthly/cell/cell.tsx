@@ -1,12 +1,12 @@
-import './style.scss'
-import React, { useContext, useEffect, useRef, useState } from 'react'
 import moment from 'moment'
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import { IEventLogic } from '../../..'
 import useDateTools from '../../../../../hooks/useDateTools'
 import { DatepickerContext } from '../../../../../provider'
-import { IEvent, IEventLogic } from '../../..'
 import Events from './events'
+import { priorityStoreInit } from './priorityStore'
+import './style.scss'
 import useEvents from './useEvents'
-import { priorityStore, priorityStoreInit } from './priorityStore'
 
 interface IProps {
   date: moment.MomentInput
@@ -52,7 +52,6 @@ const Cell = ({ date, disabled, onClick, cellIndexInWeek }: IProps) => {
           const item: any = clone.splice(find, 1)
           clone.push(item[0])
         } else {
-          console.log('calendar error', 'the date is invalid!!')
           return prev
         }
       }

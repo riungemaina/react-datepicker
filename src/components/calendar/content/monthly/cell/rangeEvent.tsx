@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
-import { IEvent, IEventLogic } from '../../..'
+import { IEventLogic } from '../../..'
 import { DatepickerContext } from '../../../../../provider'
-import { Moment } from 'moment'
 
 import moment from 'moment'
 
@@ -14,7 +13,7 @@ interface IProps {
   key: any
   setParentHeight?: any
 }
-const RangeEvent: React.FC<IProps> = ({ index, item, cellIndexInWeek, date, cellWith, key, setParentHeight }) => {
+const RangeEvent: React.FC<IProps> = ({ index, item, cellIndexInWeek, date, cellWith, setParentHeight }) => {
   const config = useContext(DatepickerContext)
   date = moment(date).locale('en').format('YYYY-MM-DD')
   const hide = cellIndexInWeek !== 0 && item.date.start !== date

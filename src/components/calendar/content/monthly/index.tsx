@@ -59,7 +59,7 @@ const MonthCalendar = () => {
             }
 
             return (
-              <tr>
+              <tr key={index}>
                 {index === 0 && <FillStart />}
                 {new Array(7).fill('d').map((i, index) => {
                   const day = index + 1 + rangeOfDays.start
@@ -105,7 +105,7 @@ const FillStart = () => {
   return (
     <>
       {new Array(getMonthStartWith()).fill('d').map((i, index) => (
-        <Cell date={getEndOfPrevMonth(index)} disabled={true} cellIndexInWeek={index} />
+        <Cell date={getEndOfPrevMonth(index)} disabled={true} cellIndexInWeek={index} key={index} />
       ))}
     </>
   )
@@ -129,7 +129,12 @@ const FillEnd = () => {
   return (
     <>
       {new Array(getMonthCountToEnd()).fill('d').map((i, index) => (
-        <Cell date={getEndOfPrevMonth(index)} disabled={true} cellIndexInWeek={7 - getMonthCountToEnd() + index} />
+        <Cell
+          date={getEndOfPrevMonth(index)}
+          disabled={true}
+          cellIndexInWeek={7 - getMonthCountToEnd() + index}
+          key={index}
+        />
       ))}
     </>
   )

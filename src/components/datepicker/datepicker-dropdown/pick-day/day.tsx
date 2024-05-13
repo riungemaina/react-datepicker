@@ -32,6 +32,11 @@ const Day = ({ day, date, disabled, onClick }: IProps) => {
     return class_
   }
 
+  const YYYY = day.split('-')[0]
+  const MM = day.split('-')[1].length == 1 ? '0' + day.split('-')[1] : day.split('-')[1]
+  const DD = day.split('-')[2].length == 1 ? '0' + day.split('-')[2] : day.split('-')[2]
+  const properDateString = `${YYYY + '-' + MM + '-' + DD}`
+
   return (
     <div
       className={classes()}
@@ -49,7 +54,7 @@ const Day = ({ day, date, disabled, onClick }: IProps) => {
       }}
       title={findEffect()?.title}
     >
-      {moment(day).format('D')}
+      {moment(properDateString).format('D')}
       {findEffect() && <span className="__datepicker-day-effect" style={{ background: findEffect()?.dotColor }} />}
     </div>
   )
